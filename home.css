@@ -9,14 +9,19 @@ body {
     font-family: 'Times New Roman', Times, serif;
     background-color: white;
 }
-
+header {
+    /*position: fixed;*/
+    background-color: black;
+}
 .topbar {
+    background-color: black;
+    /*position: fixed;*/
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    background-color: black;
-    padding: 1.5rem;
+    background-color: transparent;
+    padding: 0.8rem;
 }
 
 .logo {
@@ -44,16 +49,24 @@ body {
     transition: .4s;
 }
 
+.image{
+    text-align: center;
+    justify-content: center;
+}
+.image img{
+    width: 30%;
+    height: auto;
+}
 .welcome {
     justify-content: center;
     padding: 4%;
     text-align: center;
     padding-top: 1rem;
+    padding-bottom: 5rem;
 }
 
 .welcome h1 {
     padding-bottom: 0.7rem;
-
 }
 
 
@@ -66,22 +79,20 @@ body {
 }
 
 .image-section {
-    flex: 1;
     margin-right: 20px;
 }
 
 .image-section img {
-    width: 100%;
+    width: 85%;
     height: auto;
     border-radius: 10px;
+    margin-left: 4%;
 }
 
 .text-section {
     flex: 2;
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-left: 5%;
 }
 
@@ -107,5 +118,158 @@ body {
     text-decoration: underline;
 }
 
+.about {
+    justify-content: center;
+    padding: 4%;
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+}
+
+.about h1 {
+    padding-bottom: 0.7rem;
+
+}
 
 
+.core-values {
+    text-align: center;
+    max-width: 93%;
+    margin: 0 auto;
+}
+
+.core-values h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.core-values .highlight {
+    color: #00aaff;
+}
+
+.values-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.value-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 22%;
+    text-align: center;
+}
+
+.value-item .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.value-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.value-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.programs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.program-image img {
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 4%;
+    padding-bottom: 5%;
+}
+
+.program-text {
+    flex: 1;
+    margin-left: 5%;
+    padding-top: 5%;
+    margin-left: 5%;
+}
+
+.program-text h2 {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.program-text h3 {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.program-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color:black;
+    font-size: 1.3rem;
+}
+
+/*the team css*/
+
+.team-section {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.team-section .highlight {
+    color: #5b5bff;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.team-member .team-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
