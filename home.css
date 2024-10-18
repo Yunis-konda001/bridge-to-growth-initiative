@@ -18,7 +18,7 @@ header {
 }
 .topbar {
     background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -28,6 +28,7 @@ header {
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
     position: fixed;
+    z-index: 1;
 
 }
 
@@ -55,7 +56,7 @@ header {
     padding: 1rem;
 }
 .links a:hover{
-    text-decoration: underline rgb(28, 166, 187);
+    text-decoration: underline rgb(0, 169, 183);
     text-underline-offset: 0.4rem;
     text-decoration-thickness: 0.15rem;
     transition: .4s;
@@ -101,7 +102,7 @@ header {
   }
 
   .about-section blockquote {
-    color: #00aaff;
+    color: rgb(0, 169, 183);
     font-size: 18px; 
     font-style: italic;
     margin: 20px 0; 
@@ -129,7 +130,7 @@ header {
 }
 
 .core-values .highlight {
-    color: #00aaff;
+    color: rgb(0, 169, 183);
 }
 
 .values-container {
@@ -160,12 +161,12 @@ header {
 .value-item h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #333;
+    color: black;
 }
 
 .value-item p {
     font-size: 1rem;
-    color: #666;
+    color: black;
     line-height: 1.6;
 }
 .pro h2{
@@ -175,7 +176,7 @@ header {
     padding-top: 4rem;
 }
 .pro h2 #highlight{
-    color: #00aaff;
+    color: hsl(195, 100%, 68%);
 }
 .programs {
     display: flex;
@@ -219,7 +220,67 @@ header {
     color:black;
     font-size: 1.3rem;
 }
+/*the gallery css*/
+#Gallery h2{
+    padding-top: 5%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
 
+td {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.gallery-image {
+    padding-top: 3%;
+    width: 90%;
+    height: 400px; /* Fixed height for all images */
+    object-fit: cover; /* Crops the images to fill the space */
+    border-radius: 10px;
+    display: block;
+
+}
+
+.gallery-image:hover {
+    transform: scale(1.04); /* Slight zoom on hover */
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    width: 86%;
+    text-wrap: wrap;
+}
+
+td:hover .description {
+    opacity: 1;
+    visibility: visible;
+}
+
+td img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
 /*the team css*/
 
 .team-section {
@@ -231,12 +292,12 @@ header {
 .team-section h1 {
     text-align: center;
     font-size: 2.5rem;
-    color: #333;
+    color: black;
     margin-bottom: 1rem;
 }
 
 .team-section .highlight {
-    color: #5b5bff;
+    color: rgb(0, 169, 183);
 }
 
 .team-container {
@@ -264,11 +325,11 @@ header {
 }
 .team-member h2 {
     font-size: 1.8rem;
-    color: #333;
+    color: black;
     font-weight: bold;
 }
 .team-member h2:hover {
-    text-decoration: underline brown;
+    text-decoration: underline rgb(0, 169, 183);
     text-underline-offset: 0.11rem;
     text-decoration-thickness: 0.1rem;
     cursor: pointer;
@@ -276,7 +337,7 @@ header {
 .team-member h3 {
     font-size: 1.5rem;
     padding-top: 0.3rem;
-    color: #333;
+    color: black;
 }
 
 .social-media-icons {
@@ -285,9 +346,71 @@ header {
     gap: 1rem;
     margin-top: 0.7rem;
 }
+.social-media-icons a:hover {
+    color: rgb(0, 169, 183);
+}
 
-.social-media-icons icon a:hover {
-    transform: scale(1.01);
-    color: #0606f7;
-    cursor: pointer;
+/*the footer css*/
+.footer {
+    background-color: rgb(0, 169, 183); 
+    color: white; 
+    padding: 30px 0; /* Top and bottom padding */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Footer Content */
+.footer-content {
+    margin-bottom: 30px; /* Space between content and footer bottom */
+}
+.footer-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Social Icons */
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: brown; /* Hover effect (light blue) */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #555; /* Thin top border */
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #3498db; 
 }
