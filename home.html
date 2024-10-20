@@ -223,26 +223,35 @@
                     </a>
                 </div>
             </div>
-            <div class="team-member">
-                <img src="guy.webp" alt="Team Member 3" class="team-img">
-                <h2>Kumi Konda</h2>
-                <h3>Co-Founder</h3>
-                <div class="social-media-icons">
-                    <a href="https://www.linkedin.com/in/david-birenzi-684734329/" target="_blank"> 
-                    <div class="icon"><i class="fa-brands fa-linkedin-in" style="color: rgba(0, 0, 0, 0.895);"></i></div>
-                    </a>
-                    <a href="https://www.linkedin.com/in/david-birenzi-684734329/" target="_blank"> 
-                    <div class="icon"><i class="fa-brands fa-x-twitter" style="color: #000000;"></i></div>
-                    </a>
-                </div>
-            </div>
         </div>
     </section> 
+<!--the form section-->
+<section id="Contact">
+    <h2>Contact</h2>
+<div class="contact-container">
+    <h5>Email Us</h5>
+    <p>
+        Postal Address:<br>
+        Kakuma Refugee Camp, Turkana County, Kenya<br>
+        P.O BOX 58-00200<br>
+        Phone: (+254) 115 423 399<br>
+        Email: <a href="birenzdavid34@gmail.com">birenzdavid34@gmail.com</a>
+    </p>
+    <form target="_blank">
+        <input type="text" id="fullName" placeholder="Name" required>
+        <input type="email" id="email_id" placeholder="Email" required>
+        <textarea id="message" placeholder="Message" required></textarea>
+        <button onclick="SendMail()">Send Message</button>
+    </form>
+    <p id="responseMessage"></p>
+</div>
+
+</section>
 
     <!-- footer section -->
     <footer class="footer">
         <div class="footer-content">
-            <p>234 Ngara Street<br>Nairobi, Kenya</p>
+            <p>Kakuma Refugee Camp <br> Turkana County, Kenya</p>
             <div class="footer-social">
                 <a href="https://www.facebook.com/dignitary.younis" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://x.com/komiyounis" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
@@ -258,5 +267,16 @@
             </ul>
         </div>
     </footer>
+<script src="server.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "NzDCumzwNY9gp_x0K",
+      });
+   })();
+</script>
 </body>
 </html>
