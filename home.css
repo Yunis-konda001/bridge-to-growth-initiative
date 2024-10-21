@@ -16,6 +16,7 @@ header {
     
     background-color: rgb(255, 255, 255);
 }
+/* top bar */
 .topbar {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(15px);
@@ -30,7 +31,7 @@ header {
     position: fixed;
     z-index: 1;
 
-}
+} 
 
 .logo {
     color: white;
@@ -60,7 +61,7 @@ header {
     text-underline-offset: 0.4rem;
     text-decoration-thickness: 0.15rem;
     transition: .4s;
-}
+} 
 
 .image{
     text-align: center;
@@ -84,6 +85,11 @@ header {
     font-weight: bold;
     font-family: "Roboto", sans-serif;
   }
+
+.welcome p #highlight {
+    color: rgb(0, 169, 183);
+}
+
 /*about section*/
 .about-section {
     max-width: 800px;
@@ -135,14 +141,15 @@ header {
 
 .values-container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 3rem;
+    margin-left: 10%;
 }
 
 .value-item {
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.362);
     padding: 20px;
     margin: 10px;
     width: 22%;
@@ -174,113 +181,115 @@ header {
     font-size: 2.5rem;
     color: #000000;
     padding-top: 6rem;
+    padding-bottom: 4rem;
 }
 .pro h2 #highlight{
     color: hsl(195, 100%, 68%);
 }
 .programs {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.programs1 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.program-content {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
+    text-align: left;
+    width: 90%; 
     margin: 0 auto;
-    padding-top: 2rem;
 }
 
-.program-image img {
-    height: auto;
+.program-image1 img,
+.program-image2 img,
+.program-image3 img {
+    width: 500px; 
+    height: 300px; 
     object-fit: cover;
-    width: 70%;
     border-radius: 10px;
-    margin-left: 4%;
-}
-.program-text {
-    flex: 1;
-    margin-left: 1%;
-    padding-top: 10%;
 }
 
-.program-text h2 {
-    color: black;
-    margin-bottom: 10px;
-    font-size: 3rem;
-    font-weight: bold;
+.program-text1,
+.program-text2,
+.program-text3 {
+    width: 57%; 
+    padding-left: 20px;
 }
 
-.program-text h3 {
-    color: black;
+h3 {
     margin-bottom: 10px;
     font-size: 2rem;
-    font-weight: bold;
+    columns: #000000;
 }
 
-.program-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    color:black;
-    font-size: 1.3rem;
+p {
+    margin: 0;
 }
+
+.program-text1 h3 #highlight {
+    color: rgb(0, 169, 183)
+}
+
+.program-text2 h3 #highlight {
+    color: rgb(0, 169, 183)
+}
+
+.program-text3 h3 #highlight {
+    color: rgb(0, 169, 183)
+}
+
 /*the gallery css*/
 #Gallery h2{
     padding-top: 7%;
     text-align: center;
     font-size: 2.5rem;
 }
-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-td {
-    padding: 10px;
-    text-align: center;
+.gallery-item {
     position: relative;
+    width: 20%; 
+    height: 300px; 
+    overflow: hidden; 
+    margin-left: 4%;
+    padding-top: 1.5%;
 }
 
-.gallery-image {
-    padding-top: 3%;
-    width: 90%;
-    height: 400px; /* Fixed height for all images */
-    object-fit: cover; /* Crops the images to fill the space */
-    border-radius: 10px;
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
     display: block;
-
-}
-
-.gallery-image:hover {
-    transform: scale(1.04); /* Slight zoom on hover */
+    border-radius: 10px;
 }
 
 .description {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
-    color: white;
-    padding: 10px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    text-align: center;
-    width: 86%;
-    text-wrap: wrap;
-}
-
-td:hover .description {
-    opacity: 1;
-    visibility: visible;
-}
-
-td img {
     width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: none; 
 }
+
+.gallery-item:hover .description {
+    display: block; 
+}
+
 /*the team css*/
 
 .team-section {
@@ -356,12 +365,17 @@ td img {
     padding-top: 7%;
     padding-bottom: 1.5%;
 }
+
+#Contact {
+    padding-bottom:3%;
+    
+}
 .contact-container {
     background-color: #f5f5f5;
-    padding: 1%;
+    padding: 3%;
     width: 30%;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.362);
     margin: 0 auto;
 }
 
@@ -422,7 +436,7 @@ button:hover {
 .footer {
     background-color: #00796b; 
     color: white; 
-    padding: 30px 0; /* Top and bottom padding */
+    padding: 30px 0px; /* Top and bottom padding */
     text-align: center;
     font-family: 'Arial', sans-serif;
 }
