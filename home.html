@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bridge to growth initiative</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="home.css">
 </head>
@@ -11,21 +12,27 @@
     <header>
         <div class="topbar">
             <div class="logo">
-                <img src="logo.jpg" alt="logo">
+                <img src="logo.jpg" alt="Logo">
             </div>
-            <div class="links">
-                <nav>
-                    <a href="#Home">Home</a>
-                    <a href="#About Us">About Us</a>
-                    <a href="#Project">Project</a>
-                    <a href="#Gallery">Gallery</a>
-                    <a href="#Contact">Contact</a>
-                </nav>
+        
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        
+            <div class="links" id="navLinks">
+                <a href="#Home">Home</a>
+                <a href="#About Us">About</a>
+                <a href="#Project">Project</a>
+                <a href="#Gallery">Gallery</a>
+                <a href="#Contact">Contact</a>
             </div>
         </div>
-        </header>
         
     </header>
+
+
     <section id="Home">
         <div class="image">
             <img src="bridge.jpg" alt="bridge image">
@@ -226,7 +233,7 @@
             </div>
         </div>
     </section> 
-    
+
 <!--the form section-->
 <section id="Contact">
     <h2>Contact</h2>
@@ -278,6 +285,33 @@
         publicKey: "NzDCumzwNY9gp_x0K",
       });
    })();
+
+function toggleMenu() {
+    var navLinks = document.getElementById("navLinks");
+    var hamburger = document.getElementById("hamburger");
+
+    // Toggle active classes for both nav and hamburger icon
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("active");
+}
+
+// Close the menu when a link is clicked
+document.querySelectorAll('.links a').forEach(link => {
+    link.addEventListener('click', () => {
+        var navLinks = document.getElementById("navLinks");
+        var hamburger = document.getElementById("hamburger");
+
+        // Remove active classes to close the menu
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("active");
+    });
+});
+
+
 </script>
+
+
+    
+    
 </body>
 </html>
