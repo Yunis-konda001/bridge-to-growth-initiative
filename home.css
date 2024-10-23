@@ -124,6 +124,10 @@ body {
         width: 100%;
         justify-content: space-between;
     }
+    .gallery-item {
+        width: 95%;
+        padding-bottom: 5%;
+    }
 }
 
 
@@ -161,7 +165,7 @@ body {
     text-align: justify;
     line-height: 1.8; 
     font-family: Arial, sans-serif; 
-    padding-top: 7%;
+    padding-top: 9%;
   }
 
   .about-section h1 {
@@ -207,7 +211,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .value-item {
@@ -216,7 +220,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.362);
     padding: 20px;
     margin: 10px;
-    width: 22%;
+    width: 27%;
     text-align: center;
 }
 .value-item:hover{
@@ -244,7 +248,7 @@ body {
     text-align: center;
     font-size: 2.5rem;
     color: #000000;
-    padding-top: 6rem;
+    padding-top: 8rem;
     padding-bottom: 4rem;
 }
 .pro h2 #highlight{
@@ -310,7 +314,7 @@ p {
 
 /*the gallery css*/
 #Gallery h2{
-    padding-top: 7%;
+    padding-top: 9rem;
     text-align: center;
     font-size: 2.5rem;
 }
@@ -426,7 +430,7 @@ p {
 #Contact h2{
     text-align: center;
     font-size: 2.5rem;
-    padding-top: 7%;
+    padding-top: 9%;
     padding-bottom: 1.5%;
 }
 
@@ -534,7 +538,7 @@ button:hover {
 
 /* Footer Bottom */
 .footer-bottom {
-    border-top: 1px solid #555; /* Thin top border */
+    border-top: 1px solid #ffffff; /* Thin top border */
     padding-top: 20px;
     font-size: 14px;
 }
@@ -559,4 +563,129 @@ button:hover {
 
 .footer-links a:hover {
     color: #3498db; 
+}
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .main{
+        padding: 5%;
+        margin-top: 10%;
+    }
+    .home-page .image img{
+        width: 80%;
+    }
+    .program-content {
+        flex-direction: column;
+    }
+
+    .core-values .value-item {
+        width: 95%;
+    }
+    .value-item h3 {
+        font-size: 1.5rem;
+    }
+    .gallery-item {
+        width: 25%;
+        padding-bottom: 5%;
+    }
+
+    .team-container {
+        flex-wrap: wrap;
+    }
+
+    .team-member {
+        width: 45%;
+        height: auto;
+    }
+    .contact-container{
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        justify-content: center;
+        z-index: 5;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+    .links.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    .program-image1 img,
+    .program-image2 img,
+    .program-image3 img {
+        width: 100%;
+    }
+
+    .values-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 90%;
+    }
+    .gallery-item {
+        width: 25%;
+        padding-bottom: 5%;
+    }
+    .contact-container {
+        width: 90%;
+    }
+    .about-section {
+        padding-top: 15%;
+    }
+    #Gallery h2{
+        padding-top: 20%;
+    }
+}
+
+@media (max-width: 344px) {
+    .team-member {
+        width: 100%;
+    }
+    .gallery-item {
+        width: 95%;
+        padding-bottom: 5%;
+    }
+}
+@media (max-width: 412px) {
+    .team-member {
+        width: 100%;
+    }
+    .gallery-item {
+        width: 95%;
+        padding-bottom: 5%;
+    }
+}
+@media (max-width: 430px) {
+    .home-page .image img{
+        padding-top: 3rem;
+    }
+    .gallery-item {
+        width: 90%;
+        padding-bottom: 5%;
+    }
+    .about-section h1 {
+        padding-top: 4rem;
+    }
+    #Gallery h2{
+        padding-top: 7rem;
+    }
 }
