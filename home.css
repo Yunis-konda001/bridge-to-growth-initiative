@@ -342,13 +342,17 @@ p {
     border-radius: 10px;
 }
 
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
 .description {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6); 
-    color: #fff;
+    color: rgb(0, 169, 183);
     text-align: center;
     padding: 10px;
     display: none; 
@@ -679,7 +683,7 @@ button:hover {
         padding-top: 3rem;
     }
     .gallery-item {
-        width: 90%;
+        width: 100%;
         padding-bottom: 5%;
     }
     .about-section h1 {
